@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "Righteous-Regular";
+    src: 
+        url("./fonts/Righteous-Regular.woff") format("woff"),
+        url("./fonts/Righteous-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Righteous-Regular", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.container{
+    height: 100%;
+    width: 70%;
+    display: grid;
+    margin: auto;
+    background-color: #e4e4e7;
+    grid-template-rows: 1fr 7fr;
+    grid-template-areas: 
+        "header"
+        "content";
+}
+
+.header {
+    background-color: #a1a1aa;
+    grid-area: header;
+    box-shadow: 1px 4px 20px 2px #52525b;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.logo {
+    background-image: url("./images/avatar.jpeg");
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: inline-flex;
+    border-radius: 50%;
+}
+
+.title-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.title-container > div {
+    margin-left: 1.5rem;
+}
+
+.title-container > .logo {
+    height: 50px;
+    width: 50px;
+    
+}
+
+.action-button {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.action-button > button,
+ .action > button {
+    background-color: #52525b;
+    color: #e4e4e7;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 12px;
+    border: none;
+    min-width: 80px;
+    font-weight: bold;
+    font-family: "Righteous-Regular", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.game-container,
+.turn-container,
+.board-container {
+    width: 80%;
+    display: grid;
+    margin: auto;
+    gap: 2rem;
+    justify-items: center;
+}
+
+.new-game-form {
+    border-radius: 12px;
+    background-color: #a1a1aa;
+    box-shadow: 1px 4px 20px 2px #52525b;
+    width: 80%;
+    display: grid;
+    justify-content: stretch;
+
+}
+
+.new-game-form form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+.player-name {
+    border: none;
+}
+
+.form-legend {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    height: 4rem;
+    gap: 1.5rem;
+}
+
+.form-row div {
+    flex: 1 0 auto;
+}
+
+.form-row label {
+    display: block;
+    font-size: 0.85rem;
+    text-shadow: 0px 1px gray;
+}
+
+.form-row input[type="text"] {
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    height: 30px;
+    width: 250px;
+    background-color: #f0f3ff;
+}
+
+.form-row input[type="text"]:focus {
+    outline-color: #bbdff1;
+    box-shadow: 1px 1px 2px #bbdff1;
+}
+
+.action {
+    margin: 0 0 1rem 0;
+    padding-right: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-self: end;
+
+}
+
+.action > button {
+    height: 1.5rem;
+    width: 7rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+}
+
+.action-button > button:before {
+    content: url("./icons/play.svg");
+    height: 25px;
+    width: 25px;
+    filter: invert(100%) sepia(97%) saturate(16%) hue-rotate(237deg) brightness(104%) contrast(100%);
+}
+
+.action > .cancel-new-game {
+    background-color: #e4e4e7;
+    color: #52525b;
+}
+
+.basic-input-fields {
+    background-color: #FFFFFF;
+    border: none;
+    box-shadow: 1px 10px 10px #d3d3d3;
+    padding: 20px 10% 20px 10%;
+}
+
+.board-container {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    gap: 1.5rem;
+    width: 600px;
+    height: 600px;
+}
+
+.cell {
+    background-color: #52525b;
+    color: #e4e4e7;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    font-size: 8rem;
+
+}
+
+.game-finished-container {
+    width: 80%;
+    margin: auto;
+}
+
+.game-finished-container > h1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+

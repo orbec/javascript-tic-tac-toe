@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title-container">
+                <div class="logo"></div>
+                <div>
+                    <div class="greeting">Hi there,</div>
+                    <div class="name">Jairo Lopez (@Orbec)</div>
+                </div>
+            </div>
+            <div class="action-button">
+                <button id="new-game" onclick="showNewGameForm(event)">New Game</button>
+            </div>
+        </div>
+        <div class="game-container">
+            <div class="new-game-form">
+                <form action="" onsubmit="newGame(event)" method="post">
+                    <fieldset class="player-name">
+                        <div class="form-legend">Player Names</div>
+                        <div class="form-row">
+                            <div>
+                                <label for="first-player">FIRST PLAYER</label>
+                                <input type="text" id="first-player" name="first-player"/>
+                            </div>
+                            <div>
+                                <label for="second-player">SECOND PLAYER</label>
+                                <input type="text" id="second-player" name="second-player"/>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="action">
+                            <button id="cancel-new-game"  type="button" class="cancel-new-game" onclick="cancelGame()">Cancel</button>
+                            <button id="create-new-game"  type="submit">Create Game</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+            <div class="turn-container">
+                <h1></h1>
+            </div>
+            <div  id ="game-finished" class="game-finished-container">
+                <h1></h1>
+            </div>
+
+            <div class="board-container">
+                Board
+            </div>
+
+            
+            
+        </div>
+    </div>
+
+     
+
+</body>
+</html>
